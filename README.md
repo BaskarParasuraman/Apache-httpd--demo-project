@@ -5,6 +5,7 @@ This project demonstrates how to deploy a simple static website using the Apache
 This project includes a few milestones to help you gain hands-on experience.
 
 **Milestone 1: Deploy the Static Website on an EC2 Instance**
+/n
 Step 1: Launch an Ubuntu EC2 Instance
 Step 2: Connect to the EC2 instance using SSH
 Step 3: Update Packages and Install Apache
