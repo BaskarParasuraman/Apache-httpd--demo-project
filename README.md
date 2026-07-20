@@ -25,3 +25,14 @@ Step 7: Access the Application -> Open a web browser and navigate to:
 If the deployment is successful, the static website will be displayed.
 ```
 <img width="872" height="428" alt="Screenshot 2026-07-20 175047" src="https://github.com/user-attachments/assets/06f9e80c-1193-403f-923e-67f3a5066983" />
+
+**Milestone 2: Containerize your application using Docker and run in localhost**
+```markdown
+Step 1: Create a Dockerfile.
+Step 2: Build the Docker image.
+Step 3: Run the container.
+Step 4: Access the application through the mapped port.
+Step 5: Verify the container is running successfully.
+Step 6: Access the application in your browser using http://localhost:8080
+```
+
