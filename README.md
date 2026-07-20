@@ -23,5 +23,5 @@ Step 7: Access the Application -> Open a web browser and navigate to:
           http://EC2-Public-IP
 
 If the deployment is successful, the static website will be displayed.
-
+```
 <img width="872" height="428" alt="Screenshot 2026-07-20 175047" src="https://github.com/user-attachments/assets/06f9e80c-1193-403f-923e-67f3a5066983" />
