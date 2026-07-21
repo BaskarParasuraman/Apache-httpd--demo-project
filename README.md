@@ -36,3 +36,11 @@ Step 5: Verify the container is running successfully.
 Step 6: Access the application in your browser using http://localhost:8080
 ```
 
+**Milestone 3: Push docker image into Dockerhub repository**
+```markdown
+Step 1: Login Dockerhub
+Step 2: Tag the docker image with your username
+Step 3: Login docker from terminal using -> docker login (provide credentials)
+Step 4: Use docker push command to push into the docker hub
+Step 5: Verify in the docker hub and then you can download the image using docker pull command.
+```
