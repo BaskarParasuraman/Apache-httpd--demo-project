@@ -54,3 +54,95 @@ Step 2: Do ssh and install docker onto the instance.
 Step 3: Finally we just pull the image from docker hub and we ran.
 Step 4: Now we can access the application using public ip of our ec2 instance.
 ```
+
+**Milestone 5: Implement Continuous Integration (CI) Using GitHub Actions**
+```markdown
+Objective
+
+Automate the process of building and pushing Docker images to Docker Hub whenever code is pushed to the GitHub repository.
+
+Steps
+Step 1: Configure Docker Hub Credentials
+
+Store the Docker Hub username and access token as GitHub Actions secrets:
+
+DOCKER_USERNAME
+DOCKER_PASSWORD
+Step 2: Create GitHub Actions Workflow
+
+Create a workflow file under:
+
+.github/workflows/docker-ci.yml
+
+The workflow performs the following tasks:
+
+Checks out the source code
+Authenticates with Docker Hub
+Builds the Docker image
+Pushes the image to Docker Hub
+Step 3: Commit and Push Changes
+
+Push the workflow configuration to the repository.
+
+Step 4: Verify the Workflow
+
+Navigate to the Actions tab in GitHub and verify that the workflow executes successfully.
+
+Outcome
+
+The Docker image is automatically built and pushed to Docker Hub whenever changes are pushed to the repository.
+```
+
+**Milestone 6: Implement Continuous Deployment (CD) to AWS EC2**
+```markdown
+Objective
+
+Automate the deployment process by pulling the latest Docker image from Docker Hub and deploying it to an AWS EC2 instance.
+
+Steps
+Step 1: Configure EC2 Access Secrets
+
+Store the following secrets in GitHub Actions:
+
+EC2_HOST
+EC2_USERNAME
+EC2_SSH_KEY
+Step 2: Extend the GitHub Actions Workflow
+
+Add a deployment job that runs after the image is successfully pushed to Docker Hub.
+
+Step 3: Connect to the EC2 Instance
+
+Use SSH from GitHub Actions to connect to the target EC2 instance.
+
+Step 4: Deploy the Latest Docker Image
+
+The deployment process performs the following actions:
+
+Pulls the latest Docker image from Docker Hub
+Stops the existing container
+Removes the old container
+Starts a new container using the latest image
+Step 5: Verify Deployment
+
+Access the application using the EC2 public IP address and verify that the latest changes are reflected.
+```
+
+**Outcome**
+```markdown
+Every code change pushed to the main branch automatically triggers:
+
+Git Push
+    ↓
+GitHub Actions
+    ↓
+Build Docker Image
+    ↓
+Push Image to Docker Hub
+    ↓
+Deploy to EC2
+    ↓
+Application Updated
+
+This completes a fully automated CI/CD pipeline using GitHub Actions, Docker Hub, and AWS EC2.
+```
