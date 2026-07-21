@@ -24,4 +24,4 @@ jobs:
         run: docker build -t baskarp04/apache-httpd-web:latest .
 
       - name: Push docker image
-        run: docker push baskar04/apache-httpd-web:latest
+        run: docker push baskarp04/apache-httpd-web:latest
