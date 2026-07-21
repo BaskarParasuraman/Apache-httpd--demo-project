@@ -25,3 +25,24 @@ jobs:
 
       - name: Push docker image
         run: docker push baskarp04/apache-httpd-web:latest
+
+  deploy:
+    name: Deploy into ec2 instance
+    needs: build-on-push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to ec2
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo docker pull baskarp04/apache-httpd-web:latest
+
+            sudo docker stop apache-web || true
+            sudo docker rm apache-web || true
+
+            sudo docker run -d -p 8080:80 --name apache-web baskarp04/apache-httpd-web:latest
+    
