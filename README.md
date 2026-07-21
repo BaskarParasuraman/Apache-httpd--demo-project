@@ -128,6 +128,8 @@ Step 5: Verify Deployment
 Access the application using the EC2 public IP address and verify that the latest changes are reflected.
 ```
 
+<img width="935" height="325" alt="Screenshot 2026-07-21 123055" src="https://github.com/user-attachments/assets/933b5e2d-44ff-4899-b2e8-39d117567211" />
+
 **Outcome**
 ```markdown
 Every code change pushed to the main branch automatically triggers:
@@ -146,3 +148,5 @@ Application Updated
 
 This completes a fully automated CI/CD pipeline using GitHub Actions, Docker Hub, and AWS EC2.
 ```
+
+<img width="945" height="432" alt="Screenshot 2026-07-21 123659" src="https://github.com/user-attachments/assets/e23b0e11-cd99-4762-ba60-545a2a5a8c51" />
