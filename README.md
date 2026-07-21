@@ -44,3 +44,13 @@ Step 3: Login docker from terminal using -> docker login (provide credentials)
 Step 4: Use docker push command to push into the docker hub
 Step 5: Verify in the docker hub and then you can download the image using docker pull command.
 ```
+
+**Milestone 4: Run the container application in ec2 instance**
+```markdown
+* In the first milestone, we run this application in a simply way like we install apache server manually and map required files to the desired path and then we start the server manually, finally we access the application.
+* In this milestone, we dockerize everything required to run this application and did not do any manual thing. Just pull the docker image from the docker hub and run that. And we access the application easily in a simple way.
+Step 1: Lanch an instance and Edit the Security groups to open inbound traffic.
+Step 2: Do ssh and install docker onto the instance.
+Step 3: Finally we just pull the image from docker hub and we ran.
+Step 4: Now we can access the application using public ip of our ec2 instance.
+```
